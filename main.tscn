@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://djqmm5201kml2"]
+
+[ext_resource type="Script" uid="uid://cp7rhikwa7c07" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_ucj5b"]
+
+[node name="Main" type="CanvasLayer" unique_id=1112821355]
+script = ExtResource("1_ig7tw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1517835850]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 2
+metadata/_edit_lock_ = true
+
+[node name="PreviewPanel" type="PanelContainer" parent="VBoxContainer" unique_id=1004606489]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PreviewPanel" unique_id=516503451]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="PreviewLabel" type="Label" parent="VBoxContainer/PreviewPanel/ScrollContainer" unique_id=1020062771]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "My Text..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="PreviewToast" type="Label" parent="VBoxContainer/PreviewPanel" unique_id=530592361]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ControlsPanel" type="PanelContainer" parent="VBoxContainer" unique_id=1322063241]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_lquwl")
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/ControlsPanel" unique_id=593494782]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ControlsPanel/ScrollContainer" unique_id=303814884]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_edit_lock_ = true
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer" unique_id=1413522508]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 12
+columns = 2
+metadata/_edit_lock_ = true
+
+[node name="TextEdit" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1617578323]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Input Field"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="InputField" type="LineEdit" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1090528671]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(1, 0, 0, 1)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color_pressed = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+placeholder_text = "Type..."
+clear_button_enabled = true
+caret_blink = true
+caret_mid_grapheme = true
+metadata/_edit_lock_ = true
+
+[node name="Weight" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=35102202]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Weight"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="WeightButton" type="OptionButton" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1478223718]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+selected = 0
+item_count = 1
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+metadata/_edit_lock_ = true
+
+[node name="FontFamily" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=54135417]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Font Family"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="FontButton" type="OptionButton" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1358078177]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+text_overrun_behavior = 1
+selected = 0
+item_count = 1
+popup/item_0/text = "Select"
+popup/item_0/id = 0
+metadata/_edit_lock_ = true
+
+[node name="FontSize" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=458602057]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Font Size"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="SizeSlider" type="HSlider" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=2093002039]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 8.0
+max_value = 96.0
+step = 8.0
+value = 48.0
+metadata/_edit_lock_ = true
+
+[node name="FontColor" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=135579312]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Font Color"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="FontColorPick" type="ColorPicker" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1330315421]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+edit_alpha = false
+edit_intensity = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+metadata/_edit_lock_ = true
+
+[node name="ImportFile" type="Label" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=409697049]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Import File"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ImportButton" type="OptionButton" parent="VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer" unique_id=1794134082]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 8
+theme_override_icons/arrow = SubResource("ImageTexture_ucj5b")
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "Select system (DnD isn't possible)"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Main Data"
+popup/item_1/id = 1
+popup/item_2/text = "Data (root)"
+popup/item_2/id = 2
+metadata/_edit_lock_ = true
+
+[node name="FontFileDialog" type="FileDialog" parent="." unique_id=1130031589]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+content_scale_factor = 0.5
+file_mode = 0
+display_mode = 1
+use_native_dialog = true

@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="FontViewer"
-run/main_scene="uid://cf44w4dqycejr"
+config/tags=PackedStringArray("demo", "font", "font_viewer", "font_viewing", "fonts")
+run/main_scene="uid://djqmm5201kml2"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
