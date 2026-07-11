@@ -2,11 +2,12 @@ extends CanvasLayer
 
 @onready var preview_label: Label = $VBoxContainer/PreviewPanel/ScrollContainer/PreviewLabel
 @onready var preview_toast_label: Label = $VBoxContainer/PreviewPanel/PreviewToast
-@onready var input_field: LineEdit = $VBoxContainer/ControlsPanel/MarginContainer/GridContainer/InputField
-@onready var weight_button: OptionButton = $VBoxContainer/ControlsPanel/MarginContainer/GridContainer/WeightButton
-@onready var font_button: OptionButton = $VBoxContainer/ControlsPanel/MarginContainer/GridContainer/FontButton
-@onready var size_slider: HSlider = $VBoxContainer/ControlsPanel/MarginContainer/GridContainer/SizeSlider
-@onready var import_button: OptionButton = $VBoxContainer/ControlsPanel/MarginContainer/GridContainer/ImportButton
+@onready var input_field: LineEdit = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/InputField
+@onready var weight_button: OptionButton = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/WeightButton
+@onready var font_button: OptionButton = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/FontButton
+@onready var size_slider: HSlider = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/SizeSlider
+@onready var font_color_picker: ColorPicker = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/FontColorPick
+@onready var import_button: OptionButton = $VBoxContainer/ControlsPanel/ScrollContainer/MarginContainer/GridContainer/ImportButton
 @onready var font_file_dialog: FileDialog = $FontFileDialog
 
 var fonts = {
@@ -27,6 +28,7 @@ func _ready():
 	weight_button.item_selected.connect(_on_font_settings_changed)
 	font_button.item_selected.connect(_on_font_settings_changed)
 	size_slider.value_changed.connect(_on_size_changed)
+	font_color_picker.color_changed.connect(_on_font_color_changed)
 	import_button.item_selected.connect(_on_import_button_pressed)
 	font_file_dialog.file_selected.connect(_on_font_file_selected)
 	
@@ -96,13 +98,17 @@ func _on_size_changed(_value: int):
 	preview_toast_label.modulate.a = 1.0
 	update_preview()
 
+func _on_font_color_changed(_color: Color):
+	preview_label.add_theme_color_override("font_color", _color)
+	update_preview()
+
 func _on_import_button_pressed(_index: int):
 	if _index == 1: font_file_dialog.access = FileDialog.ACCESS_FILESYSTEM
 	if _index == 2: font_file_dialog.access = FileDialog.ACCESS_USERDATA
-	font_file_dialog.popup()
+	font_file_dialog.popup_centered_ratio()
 	import_button.selected = 0
 
-func _on_font_file_selected(path: String) -> void:
+func _on_font_file_selected(path: String):
 	var file_name = path.get_file().get_basename()
 	
 	var imported_font = FontFile.new()

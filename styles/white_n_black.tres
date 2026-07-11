@@ -1,0 +1,147 @@
+[gd_resource type="Theme" format=3 uid="uid://bvc42c1faoifb"]
+
+[ext_resource type="StyleBox" uid="uid://cyisam3aukxll" path="res://styles/panel_normal.tres" id="1_04l5a"]
+[ext_resource type="StyleBox" uid="uid://cdyhvntno7k7n" path="res://styles/panel_pressed.tres" id="2_8vqiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04l5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_alanb"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ucj5b"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_alanb"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_qjdwg"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_p3ive"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucj5b"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_alanb"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1w2nw"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brhjv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fxdjc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vqiv"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_brhjv"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fxdjc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_04l5a"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_8vqiv"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/styles/disabled = ExtResource("1_04l5a")
+Button/styles/focus = SubResource("StyleBoxEmpty_04l5a")
+Button/styles/hover = ExtResource("1_04l5a")
+Button/styles/normal = ExtResource("1_04l5a")
+Button/styles/pressed = ExtResource("2_8vqiv")
+CheckBox/colors/checkbox_checked_color = Color(1, 1, 1, 1)
+CheckBox/colors/checkbox_unchecked_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_pressed_color = Color(0, 0, 0, 1)
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_alanb")
+CheckBox/styles/hover_pressed = ExtResource("1_04l5a")
+CheckBox/styles/pressed = ExtResource("1_04l5a")
+FileDialog/styles/panel = ExtResource("2_8vqiv")
+HSlider/icons/grabber = SubResource("ImageTexture_ucj5b")
+HSlider/icons/grabber_disabled = SubResource("ImageTexture_alanb")
+HSlider/icons/grabber_highlight = SubResource("ImageTexture_qjdwg")
+HSlider/icons/tick = SubResource("ImageTexture_p3ive")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ucj5b")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_alanb")
+HSlider/styles/slider = SubResource("StyleBoxFlat_1w2nw")
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/clear_button_color = Color(0, 0, 0, 1)
+LineEdit/colors/clear_button_color_pressed = Color(1, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_placeholder_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_uneditable_color = Color(0, 0, 0, 1)
+LineEdit/colors/selection_color = Color(0, 0, 0, 1)
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_brhjv")
+LineEdit/styles/normal = ExtResource("1_04l5a")
+LineEdit/styles/read_only = ExtResource("1_04l5a")
+MenuButton/styles/disabled = ExtResource("1_04l5a")
+MenuButton/styles/hover = ExtResource("1_04l5a")
+MenuButton/styles/normal = ExtResource("1_04l5a")
+MenuButton/styles/pressed = ExtResource("1_04l5a")
+OptionButton/styles/disabled = ExtResource("2_8vqiv")
+OptionButton/styles/hover = ExtResource("1_04l5a")
+OptionButton/styles/normal = ExtResource("1_04l5a")
+OptionButton/styles/pressed = ExtResource("2_8vqiv")
+PopupMenu/colors/font_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_disabled_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_separator_color = Color(0, 0, 0, 1)
+PopupMenu/styles/hover = ExtResource("1_04l5a")
+PopupMenu/styles/panel = ExtResource("1_04l5a")
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/styles/background = SubResource("StyleBoxFlat_1w2nw")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_ucj5b")
+TextEdit/colors/caret_color = Color(0, 0, 0, 1)
+TextEdit/colors/current_line_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_placeholder_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+TextEdit/colors/selection_color = Color(0, 0, 0, 1)
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_fxdjc")
+TextEdit/styles/normal = ExtResource("1_04l5a")
+TextEdit/styles/read_only = SubResource("StyleBoxEmpty_8vqiv")
+VSlider/icons/grabber = SubResource("ImageTexture_brhjv")
+VSlider/icons/grabber_disabled = SubResource("ImageTexture_fxdjc")
+VSlider/icons/grabber_highlight = SubResource("ImageTexture_04l5a")
+VSlider/icons/tick = SubResource("ImageTexture_8vqiv")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_ucj5b")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_alanb")
+VSlider/styles/slider = SubResource("StyleBoxFlat_1w2nw")
