@@ -11,7 +11,7 @@ extends CanvasLayer
 @onready var font_file_dialog: FileDialog = $FontFileDialog
 
 var fonts = {
-	"Warm, approachable, and playful (Nunito)": {
+	"Warm, friendly, and playful (Nunito)": {
 		"Light": "res://fonts/nunito/0.ttf",
 		"Regular": "res://fonts/nunito/1.ttf",
 		"Medium": "res://fonts/nunito/2.ttf",
@@ -34,9 +34,8 @@ func _ready():
 	
 	update_preview()
 	
-	if OS.get_name() == "Android": import_button.set_item_text(0, "Select file via Android System")
-	if OS.get_name() == "PC": import_button.set_item_text(0, "Import file (DnD not possible!)")
-	if OS.get_name() == "XR": import_button.set_item_text(0, "Import file (Google, Meta)")
+	if OS.get_name() == "Android": import_button.set_item_text(0, "Import file via Android")
+	if OS.get_name() == "PC": import_button.set_item_text(0, "Import file")
 	import_button.set_item_text(1, "Main " + OS.get_name())
 
 func _process(delta):
@@ -115,7 +114,7 @@ func _on_font_file_selected(path: String):
 	imported_font.load_dynamic_font(path)
 	
 	fonts[file_name] = {
-		"Custom": imported_font
+		"Regular": imported_font
 	}
 	
 	setup_ui_options()
